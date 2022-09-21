@@ -1,0 +1,80 @@
+body{
+    font-family: 'Source Code Pro', monospace;
+}
+
+
+.card-wrapper{
+    margin: 20px;
+    padding: 20px;
+   
+}
+
+.card-face{
+    width: 570px;
+    height: 320px;
+    margin: auto;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    border-radius: 10px;
+    gap: 15%;
+    padding: 5%;
+}
+
+.output{
+    height: 40px;
+    min-width: 80px;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.card-holder{
+    width: 50%;
+}
+
+.card__expire{
+    display: flex;
+}
+
+.card-number{
+}
+
+.add-info{
+    display: flex;
+}
+
+.card__form{
+    padding: 20px;
+    width: 80%;
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin: auto;
+}
+
+input, select, option, .submit-btn-active{
+    height: 40px;
+    width: 80%;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+input:focus, select:focus, option:focus{
+    border: 3px solid blue;
+}
+
+.submit-btn-active{
+    border: 1px solid blue;
+    background-color: blue;
+    width: 30%;
+    margin: auto;
+    display: block;
+    color: white;
+}

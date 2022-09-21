@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/reset.css">
+    <link rel="stylesheet" href="./assets/styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <title>Vue Credit Card</title>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <div id="app" class="card-wsection">
+
+        <div class="card-wrapper">
+            <div class="card-face">
+                <div class="output card-number">{{number || '#### #### #### ####'}}</div>
+
+                <div class="add-info">
+                    <div class="output card-holder">{{holder || 'Name Lastname'}}</div>
+                    <div class="output">{{expDate || 'MM'}}</div>
+                    <div class="output">{{expYear || 'YYYYY'}}</div>
+                </div>
+            </div>
+            <!-- <div class="card-back">
+                <div>{{expYear}}</div>
+            </div> -->
+        </div>
+
+        <form class="card__form" action="">
+            <input type="text" placeholder="number" v-model="number">
+            <input type="text" placeholder="cardholder name" v-model="holder">
+            <div class="card__expire">
+
+                <select name="month" id="month" placeholder="month" v-model="expDate">
+                    <option value="01">1</option>
+                    <option value="02">2</option>
+                    <option value="03">3</option>
+                    <option value="04">4</option>
+                </select>
+
+                <select name="year" id="year" v-model="expYear">
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                </select>
+
+            </div>
+            <button class="submit-btn-active" type="submit">send</button>
+        </form>
+
+    </div>
+
+    <script src="./main.js"></script>
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+
+
+</body>
+
+</html>
